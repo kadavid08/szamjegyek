@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //1. Írj egy JavaScript programot, amely bekér egy pozitív egész számot, majd kiszámolja és kiírja a szám számjegyeinek összegét!
+            let szam = parseInt(prompt("Adj meg egy pozitív egész számot:"));
+            let osszeg = 0;
+
+            if (szam > 0)
+            {
+                for (let i = 0; i < szam.toString().length; i++)
+                {
+                    osszeg += parseInt(szam.toString()[i]);
+                }
+            }
+            else
+            {
+                console.log("Hibás bemenet! Kérem, adj meg egy pozitív egész számot.");
+            }
+            console.log("A számjegyek összege: " + osszeg);
+
+            //or
+            let szam2 = parseInt(prompt("Adj meg egy pozitív egész számot:"));
+            let osszeg2 = 0;
+
+            while (szam2 > 0)
+            {
+                osszeg2 += szam2 % 10;
+                szam2 = Math.floor(szam2 / 10);
+            }
+            console.log("A számjegyek összege: " + osszeg2);
+
+
+    </script>
+</body>
+</html>

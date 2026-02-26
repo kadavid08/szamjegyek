@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. Készíts egy egyszerű számológép programot, amely két számot és egy műveletet kér be, majd kiírja az eredményt!
+            let szam3 = parseFloat(prompt("Adj meg egy számot:"));
+            let szam4 = parseFloat(prompt("Adj meg egy másik számot:"));
+            let muvelet = prompt("Adj meg egy műveletet (+, -, *, /):");
+
+            let eredmeny = 0;
+            if (muvelet === "+")
+            {
+                eredmeny = szam3 + szam4;
+            }
+            else if (muvelet === "-")
+            {
+                eredmeny = szam3 - szam4;
+            }
+            else if (muvelet === "*")
+            {
+                eredmeny = szam3 * szam4;
+            }
+            else if (muvelet === "/")
+            {
+                if (szam4 !== 0)
+                {
+                    eredmeny = szam3 / szam4;
+                }
+                else
+                {
+                    console.log("Hiba: Nem lehet nullával osztani!");
+                }
+            }
+            else
+            {
+                console.log("Hibás művelet! Kérem, adj meg egy érvényes műveletet (+, -, *, /).");
+            }
+            console.log("Az eredmény: " + eredmeny);
+    </script>
+</body>
+</html>
